@@ -75,12 +75,10 @@
 
     <script>
         function showLang(lang) {
-            // Show/hide text blocks
             document.querySelectorAll("[data-lang]").forEach(el => {
                 el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
             });
 
-            // Update navigation labels
             document.getElementById("nav-about").innerText     = lang === "fr" ? "À propos" : "O mně";
             document.getElementById("nav-services").innerText  = lang === "fr" ? "Services" : "Služby";
             document.getElementById("nav-approach").innerText  = lang === "fr" ? "Approche" : "Přístup";
@@ -101,7 +99,6 @@
     </div>
 </header>
 
-
 <nav>
     <a href="#about" id="nav-about">À propos</a>
     <a href="#services" id="nav-services">Services</a>
@@ -109,14 +106,14 @@
     <a href="#contact" id="nav-contact">Contact</a>
 </nav>
 
-
 <!-- ABOUT -->
 <div class="section" id="about">
     <div data-lang="fr">
         <h2>À propos de moi</h2>
         <p>
             Je suis consultante spécialisée en burn-out, stress chronique et bien-être émotionnel.
-            J’accompagne les personnes épuisées, débordées ou en perte d’équilibre afin de retrouver leur énergie,
+            Psychologue sociale et du travail diplômée en 2005, j’ai passé mes 15 dernières années professionnelles au sein d’entreprises multinationales à Prague en tant que Consultante en RH et Mobilité internationale.
+            J’accompagne aujourd’hui les personnes épuisées, débordées ou en perte d’équilibre afin de retrouver leur énergie,
             comprendre les causes profondes de leur surcharge mentale et reconstruire un rythme de vie sain.
         </p>
     </div>
@@ -125,12 +122,12 @@
         <h2>O mně</h2>
         <p>
             Jsem konzultantka specializující se na syndrom vyhoření, chronický stres a emoční pohodu.
+            Jsem absolventkou sociální a pracovní psychologie (2005) a posledních 15 let jsem pracovala v mezinárodních společnostech v Praze jako konzultantka pro HR a mezinárodní mobilitu.
             Pomáhám lidem, kteří jsou vyčerpaní nebo přetížení, znovu získat energii,
             pochopit příčiny svého stavu a vytvořit si zdravější životní rytmus.
         </p>
     </div>
 </div>
-
 
 <!-- SERVICES -->
 <div class="section" id="services">
@@ -157,7 +154,6 @@
     </div>
 </div>
 
-
 <!-- APPROACH -->
 <div class="section" id="approach">
     <div data-lang="fr">
@@ -179,7 +175,6 @@
     </div>
 </div>
 
-
 <!-- CONTACT -->
 <div class="section" id="contact">
     <div data-lang="fr">
@@ -192,5 +187,15 @@
     <div data-lang="cz">
         <h2>Kontakt</h2>
         <p><strong>Email:</strong> váš-email@example.com</p>
-        <p><stro
+        <p><strong>Konzultace:</strong> online nebo po domluvě</p>
+        <a class="button" href="mailto:váš-email@example.com">Objednat konzultaci</a>
+    </div>
+</div>
+
+<footer>
+    © 2025 Lenka Horáčková – Burn-out Consultant
+</footer>
+
+</body>
+</html>
 
