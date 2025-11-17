@@ -2,49 +2,62 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta-name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lenka Horáčková – Burn-out Consultant</title>
     <style>
-        body { 
-            font-family: 'Arial', sans-serif; 
-            margin: 0; 
-            background: #f4f7f8; 
-            color: #333; 
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f7f8;
+            margin: 0;
+            color: #333;
         }
-        header { 
-            background: #6a8b8e; 
-            padding: 70px 20px; 
-            text-align: center; 
-            color: white; 
+        header {
+            background: #6a8b8e;
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
         }
-        nav { 
-            background: #4e6b6e; 
-            padding: 12px; 
-            text-align: center; 
+        nav {
+            background: #4e6b6e;
+            text-align: center;
+            padding: 12px;
         }
-        nav a { 
-            color: white; 
-            text-decoration: none; 
-            margin: 0 15px; 
-            font-size: 17px; 
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 17px;
         }
-        .section { 
-            background: white; 
-            width: 70%; 
-            margin: 40px auto; 
-            padding: 40px; 
-            border-radius: 10px; 
+        .lang-switch {
+            margin-top: 15px;
+        }
+        .lang-switch button {
+            background: white;
+            color: #4e6b6e;
+            border: none;
+            padding: 8px 15px;
+            margin: 0 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .section {
+            width: 70%;
+            margin: 40px auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
             box-shadow: 0 4px 14px rgba(0,0,0,0.08);
         }
-        h2 { 
-            color: #4e6b6e; 
-            margin-top: 0;
+        h2 {
+            color: #4e6b6e;
         }
         footer {
             background: #6a8b8e;
-            color: white;
             text-align: center;
             padding: 25px;
+            color: white;
             margin-top: 60px;
         }
         .button {
@@ -57,57 +70,126 @@
             font-size: 16px;
         }
     </style>
+
+    <script>
+        function showLang(lang) {
+            document.querySelectorAll("[data-lang]").forEach(el => {
+                el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
+            });
+        }
+    </script>
 </head>
 
-<body>
+<body onload="showLang('fr')">
 
 <header>
     <h1>Lenka Horáčková</h1>
-    <p>Burn-out Consultant • Stress Management Specialist • Well-being Coaching</p>
+    <p>Burn-out Consultant • Stress Management Specialist</p>
+    <div class="lang-switch">
+        <button onclick="showLang('fr')">FR</button>
+        <button onclick="showLang('cz')">CZ</button>
+    </div>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#services">Services</a>
-    <a href="#approach">Approach</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">About / O mně</a>
+    <a href="#services">Services / Služby</a>
+    <a href="#approach">Approach / Přístup</a>
+    <a href="#contact">Contact / Kontakt</a>
 </nav>
 
+<!-- ABOUT SECTION -->
 <div class="section" id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a certified Burn-out Consultant specializing in stress recovery, emotional well-being, 
-        and restoring balance in both personal and professional life. My mission is to help individuals 
-        understand the roots of burnout, regain their energy, and build sustainable habits for a healthier future.
-    </p>
+
+    <div data-lang="fr">
+        <h2>À propos de moi</h2>
+        <p>
+            Je suis consultante spécialisée en burn-out, stress chronique et bien-être émotionnel.
+            J’accompagne les personnes épuisées, débordées ou en perte d’équilibre à retrouver leur énergie,
+            comprendre les causes profondes de leur surcharge mentale et reconstruire un rythme de vie plus sain.
+        </p>
+    </div>
+
+    <div data-lang="cz">
+        <h2>O mně</h2>
+        <p>
+            Jsem konzultantka specializující se na syndrom vyhoření, chronický stres a emoční pohodu.
+            Pomáhám lidem, kteří jsou vyčerpaní, přetížení nebo ztratili rovnováhu, znovu získat energii,
+            pochopit skutečné příčiny jejich stavu a vytvořit si udržitelnější a zdravější životní rytmus.
+        </p>
+    </div>
+
 </div>
 
+<!-- SERVICES SECTION -->
 <div class="section" id="services">
-    <h2>Services</h2>
-    <ul>
-        <li>🌿 Burn-out Prevention & Recovery Guidance</li>
-        <li>💬 1-on-1 Stress Coaching Sessions</li>
-        <li>🧘 Mindfulness & Work-Life Balance Strategies</li>
-        <li>🧠 Emotional Resilience Training</li>
-        <li>🏢 Workplace Stress Consultations</li>
-        <li>🎯 Personalized Recovery Plans</li>
-    </ul>
+
+    <div data-lang="fr">
+        <h2>Services</h2>
+        <ul>
+            <li>🌿 Prévention et accompagnement du burn-out</li>
+            <li>💬 Coaching individuel stress & équilibre</li>
+            <li>🧘 Stratégies de gestion de l'énergie</li>
+            <li>🧠 Développement de la résilience émotionnelle</li>
+            <li>🏢 Consultation sur le stress au travail</li>
+        </ul>
+    </div>
+
+    <div data-lang="cz">
+        <h2>Služby</h2>
+        <ul>
+            <li>🌿 Prevence a podpora při syndromu vyhoření</li>
+            <li>💬 Individuální koučink stresu a rovnováhy</li>
+            <li>🧘 Strategie pro řízení energie</li>
+            <li>🧠 Rozvoj emoční odolnosti</li>
+            <li>🏢 Konzultace ohledně stresu na pracovišti</li>
+        </ul>
+    </div>
+
 </div>
 
+<!-- APPROACH SECTION -->
 <div class="section" id="approach">
-    <h2>My Approach</h2>
-    <p>
-        My work is based on a compassionate, structured, and evidence-based approach to stress and burn-out recovery.
-        I help clients understand their emotional patterns, set realistic goals, and build healthy routines.
-        Sessions focus on awareness, clarity, and practical strategies to create long-term well-being.
-    </p>
+
+    <div data-lang="fr">
+        <h2>Mon approche</h2>
+        <p>
+            Mon approche repose sur une écoute bienveillante, des techniques pratiques
+            et une compréhension profonde des mécanismes du stress.
+            Je combine méthodes psycho-éducatives,
+            stratégies cognitives et outils de pleine conscience pour un accompagnement complet.
+        </p>
+    </div>
+
+    <div data-lang="cz">
+        <h2>Můj přístup</h2>
+        <p>
+            Můj přístup je založen na empatickém naslouchání, praktických technikách
+            a hlubokém pochopení mechanismů stresu.
+            Kombinuji psycho-edukativní metody, kognitivní strategie a mindfulness nástroje
+            pro komplexní a účinnou podporu.
+        </p>
+    </div>
+
 </div>
 
+<!-- CONTACT SECTION -->
 <div class="section" id="contact">
-    <h2>Contact</h2>
-    <p><strong>Email:</strong> your-email@example.com</p>
-    <p><strong>Location:</strong> Online Sessions Available</p>
-    <a class="button" href="mailto:your-email@example.com">Book a Session</a>
+
+    <div data-lang="fr">
+        <h2>Contact</h2>
+        <p><strong>Email :</strong> votre-email@example.com</p>
+        <p><strong>Consultation :</strong> en ligne et sur rendez-vous</p>
+        <a class="button" href="mailto:votre-email@example.com">Réserver une séance</a>
+    </div>
+
+    <div data-lang="cz">
+        <h2>Kontakt</h2>
+        <p><strong>Email:</strong> váš-email@example.com</p>
+        <p><strong>Konzultace:</strong> online nebo po domluvě</p>
+        <a class="button" href="mailto:váš-email@example.com">Objednat konzultaci</a>
+    </div>
+
 </div>
 
 <footer>
