@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lenka Horáčková – Burn-out Consultant</title>
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,13 +21,14 @@
         nav {
             background: #4e6b6e;
             text-align: center;
-            padding: 12px;
+            padding: 14px;
         }
         nav a {
             color: white;
             text-decoration: none;
-            margin: 0 15px;
-            font-size: 17px;
+            margin: 0 20px;
+            font-size: 18px;
+            font-weight: bold;
         }
         .lang-switch {
             margin-top: 15px;
@@ -73,9 +75,16 @@
 
     <script>
         function showLang(lang) {
+            // Show/hide text blocks
             document.querySelectorAll("[data-lang]").forEach(el => {
                 el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
             });
+
+            // Update navigation labels
+            document.getElementById("nav-about").innerText     = lang === "fr" ? "À propos" : "O mně";
+            document.getElementById("nav-services").innerText  = lang === "fr" ? "Services" : "Služby";
+            document.getElementById("nav-approach").innerText  = lang === "fr" ? "Approche" : "Přístup";
+            document.getElementById("nav-contact").innerText   = lang === "fr" ? "Contact" : "Kontakt";
         }
     </script>
 </head>
@@ -85,28 +94,30 @@
 <header>
     <h1>Lenka Horáčková</h1>
     <p>Burn-out Consultant • Stress Management Specialist</p>
+
     <div class="lang-switch">
         <button onclick="showLang('fr')">FR</button>
         <button onclick="showLang('cz')">CZ</button>
     </div>
 </header>
 
+
 <nav>
-    <a href="#about">About / O mně</a>
-    <a href="#services">Services / Služby</a>
-    <a href="#approach">Approach / Přístup</a>
-    <a href="#contact">Contact / Kontakt</a>
+    <a href="#about" id="nav-about">À propos</a>
+    <a href="#services" id="nav-services">Services</a>
+    <a href="#approach" id="nav-approach">Approche</a>
+    <a href="#contact" id="nav-contact">Contact</a>
 </nav>
 
-<!-- ABOUT SECTION -->
-<div class="section" id="about">
 
+<!-- ABOUT -->
+<div class="section" id="about">
     <div data-lang="fr">
         <h2>À propos de moi</h2>
         <p>
             Je suis consultante spécialisée en burn-out, stress chronique et bien-être émotionnel.
-            J’accompagne les personnes épuisées, débordées ou en perte d’équilibre à retrouver leur énergie,
-            comprendre les causes profondes de leur surcharge mentale et reconstruire un rythme de vie plus sain.
+            J’accompagne les personnes épuisées, débordées ou en perte d’équilibre afin de retrouver leur énergie,
+            comprendre les causes profondes de leur surcharge mentale et reconstruire un rythme de vie sain.
         </p>
     </div>
 
@@ -114,87 +125,72 @@
         <h2>O mně</h2>
         <p>
             Jsem konzultantka specializující se na syndrom vyhoření, chronický stres a emoční pohodu.
-            Pomáhám lidem, kteří jsou vyčerpaní, přetížení nebo ztratili rovnováhu, znovu získat energii,
-            pochopit skutečné příčiny jejich stavu a vytvořit si udržitelnější a zdravější životní rytmus.
+            Pomáhám lidem, kteří jsou vyčerpaní nebo přetížení, znovu získat energii,
+            pochopit příčiny svého stavu a vytvořit si zdravější životní rytmus.
         </p>
     </div>
-
 </div>
 
-<!-- SERVICES SECTION -->
-<div class="section" id="services">
 
+<!-- SERVICES -->
+<div class="section" id="services">
     <div data-lang="fr">
         <h2>Services</h2>
         <ul>
-            <li>🌿 Prévention et accompagnement du burn-out</li>
+            <li>🌿 Accompagnement du burn-out</li>
             <li>💬 Coaching individuel stress & équilibre</li>
-            <li>🧘 Stratégies de gestion de l'énergie</li>
-            <li>🧠 Développement de la résilience émotionnelle</li>
-            <li>🏢 Consultation sur le stress au travail</li>
+            <li>🧘 Stratégies de gestion de l’énergie</li>
+            <li>🧠 Développement de la résilience</li>
+            <li>🏢 Consultation stress professionnel</li>
         </ul>
     </div>
 
     <div data-lang="cz">
         <h2>Služby</h2>
         <ul>
-            <li>🌿 Prevence a podpora při syndromu vyhoření</li>
+            <li>🌿 Podpora při syndromu vyhoření</li>
             <li>💬 Individuální koučink stresu a rovnováhy</li>
-            <li>🧘 Strategie pro řízení energie</li>
+            <li>🧘 Strategie řízení energie</li>
             <li>🧠 Rozvoj emoční odolnosti</li>
-            <li>🏢 Konzultace ohledně stresu na pracovišti</li>
+            <li>🏢 Konzultace pracovního stresu</li>
         </ul>
     </div>
-
 </div>
 
-<!-- APPROACH SECTION -->
-<div class="section" id="approach">
 
+<!-- APPROACH -->
+<div class="section" id="approach">
     <div data-lang="fr">
         <h2>Mon approche</h2>
         <p>
-            Mon approche repose sur une écoute bienveillante, des techniques pratiques
-            et une compréhension profonde des mécanismes du stress.
-            Je combine méthodes psycho-éducatives,
-            stratégies cognitives et outils de pleine conscience pour un accompagnement complet.
+            Mon approche allie écoute, soutien et outils concrets.
+            Je combine des techniques psycho-éducatives, cognitives et de pleine conscience
+            pour aider mes clients à retrouver clarté, stabilité et énergie durable.
         </p>
     </div>
 
     <div data-lang="cz">
         <h2>Můj přístup</h2>
         <p>
-            Můj přístup je založen na empatickém naslouchání, praktických technikách
-            a hlubokém pochopení mechanismů stresu.
-            Kombinuji psycho-edukativní metody, kognitivní strategie a mindfulness nástroje
-            pro komplexní a účinnou podporu.
+            Můj přístup spojuje empatické naslouchání, podporu a praktické metody.
+            Využívám psycho-edukativní, kognitivní a mindfulness nástroje,
+            které klientům pomáhají získat jasnost, stabilitu a dlouhodobou energii.
         </p>
     </div>
-
 </div>
 
-<!-- CONTACT SECTION -->
-<div class="section" id="contact">
 
+<!-- CONTACT -->
+<div class="section" id="contact">
     <div data-lang="fr">
         <h2>Contact</h2>
         <p><strong>Email :</strong> votre-email@example.com</p>
-        <p><strong>Consultation :</strong> en ligne et sur rendez-vous</p>
+        <p><strong>Consultations :</strong> en ligne ou sur rendez-vous</p>
         <a class="button" href="mailto:votre-email@example.com">Réserver une séance</a>
     </div>
 
     <div data-lang="cz">
         <h2>Kontakt</h2>
         <p><strong>Email:</strong> váš-email@example.com</p>
-        <p><strong>Konzultace:</strong> online nebo po domluvě</p>
-        <a class="button" href="mailto:váš-email@example.com">Objednat konzultaci</a>
-    </div>
+        <p><stro
 
-</div>
-
-<footer>
-    © 2025 Lenka Horáčková – Burn-out Consultant
-</footer>
-
-</body>
-</html>
