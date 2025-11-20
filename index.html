@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lenka Horáčková – Burn-out Consultant</title>
+    <title>Lenka Horáčková — Burn-out Consultant</title>
 
     <style>
         body {
@@ -76,13 +76,13 @@
     <script>
         function showLang(lang) {
             document.querySelectorAll("[data-lang]").forEach(el => {
-                el.style.display = el.getAttribute("data-lang") === lang ? "block" : "none";
+                el.style.display = el.getAttribute("data-lang") == lang ? "block" : "none";
             });
 
-            document.getElementById("nav-about").innerText     = lang === "fr" ? "À propos" : "O mně";
-            document.getElementById("nav-services").innerText  = lang === "fr" ? "Services" : "Služby";
-            document.getElementById("nav-approach").innerText  = lang === "fr" ? "Approche" : "Přístup";
-            document.getElementById("nav-contact").innerText   = lang === "fr" ? "Contact" : "Kontakt";
+            document.getElementById("nav-about").innerText    = lang == "fr" ? "À propos" : "O mně";
+            document.getElementById("nav-services").innerText = lang == "fr" ? "Services" : "Služby";
+            document.getElementById("nav-approach").innerText = lang == "fr" ? "Approche" : "Přístup";
+            document.getElementById("nav-contact").innerText  = lang == "fr" ? "Contact" : "Kontakt";
         }
     </script>
 </head>
@@ -90,110 +90,103 @@
 <body onload="showLang('fr')">
 
 <header>
-    <h1>Lenka Horáčková</h1>
-    <p>Burn-out Consultant • Stress Management Specialist</p>
+  <h1>Lenka Horáčková</h1>
+  <p>Burn-out Consultant — Stress Management Specialist</p>
 
-    <div class="lang-switch">
-        <button onclick="showLang('fr')">FR</button>
-        <button onclick="showLang('cz')">CZ</button>
-    </div>
+  <div class="lang-switch">
+      <button onclick="showLang('fr')">FR</button>
+      <button onclick="showLang('cz')">CZ</button>
+  </div>
 </header>
 
 <nav>
-    <a href="#about" id="nav-about">À propos</a>
-    <a href="#services" id="nav-services">Services</a>
-    <a href="#approach" id="nav-approach">Approche</a>
-    <a href="#contact" id="nav-contact">Contact</a>
+  <a href="#about" id="nav-about">À propos</a>
+  <a href="#services" id="nav-services">Services</a>
+  <a href="#approach" id="nav-approach">Approche</a>
+  <a href="#contact" id="nav-contact">Contact</a>
 </nav>
 
 <!-- ABOUT -->
 <div class="section" id="about">
     <div data-lang="fr">
-        <h2>À propos de moi</h2>
+        <h2>À propos</h2>
         <p>
-            Je suis Consultante spécialisée en Burn-out parental et professionnel, stress chronique et bien-être émotionnel. <br>
-            Psychologue sociale et du travail diplômée en 2005 à l’Université de Nantes, France, j’ai passé mes 15 dernières années professionnelles au sein d’entreprises multinationales à Prague en tant que Consultante en RH et Mobilité internationale. <br>
-            En 2025, j’ai obtenu mon Certificat d'université : Diagnostic, Prévention et Traitement du Burnout Professionnel et Parental à l’Université de Louvaine La Neuve. <br>
-            J’accompagne aujourd’hui les personnes épuisées, débordées ou en perte d’équilibre afin de retrouver leur énergie, comprendre les causes profondes de leur surcharge mentale et reconstruire un rythme de vie sain.
+            Je suis Consultante spécialisée en Burn-out parental et professionnel, stress chronique et bien-être émotionnel. 
+            Psychologue sociale et du travail diplômée en 2005 à l'Université de Nantes, France, j'ai passé mes 15 dernières années professionnelles au sein d'entreprises multinationales où j'ai accompagné des personnes épuisées, dépressives ou en transition vers un mieux-être professionnel et personnel.
+        </p>
+        <p>
+            En 2025, j'ai obtenu mon Certificat d'Université : Diagnostic, Prévention et Traitement du Burnout Professionnel et Parental à l'Université de Louvain La Neuve. 
+            J'accompagne aujourd'hui les personnes épuisées, déprimées ou en perte d'engagement pour retrouver leur énergie, comprendre les causes profondes et reconstruire un rythme de vie sain.
         </p>
     </div>
 
     <div data-lang="cz">
         <h2>O mně</h2>
         <p>
-            Jsem konzultantka specializující se na syndrom vyhoření rodičů a profesní syndrom vyhoření, chronický stres a emoční pohodu. <br>
-            Absolvovala jsem sociální a pracovní psychologii v roce 2005 na Univerzitě v Nantes, Francie, a posledních 15 let jsem pracovala v mezinárodních společnostech v Praze jako konzultantka pro HR a mezinárodní mobilitu. <br>
-            V roce 2025 jsem získala Certifikát univerzity: Diagnostika, prevence a léčba profesního a rodičovského vyhoření na Univerzitě Louvain La Neuve. <br>
-            Dnes doprovázím osoby vyčerpané, přetížené nebo ztrácející rovnováhu, aby znovu našly energii, pochopily hluboké příčiny své psychické zátěže a obnovily zdravý životní rytmus.
+            Jsem konzultantka specializující se na syndrom vyhoření v rodině i v práci, chronický stres a emoční pohodu. Pracuji s lidmi od roku 2005 po absolvování sociální psychologie a psychologie práce.
         </p>
     </div>
 </div>
 
 <!-- SERVICES -->
 <div class="section" id="services">
-    <div data-lang="fr">
-        <h2>Services</h2>
-        <ul>
-            <li>🌿 Accompagnement du burn-out</li>
-            <li>💬 Coaching individuel stress & équilibre</li>
-            <li>🧘 Stratégies de gestion de l’énergie</li>
-            <li>🧠 Développement de la résilience</li>
-            <li>🏢 Consultation stress professionnel</li>
-        </ul>
-    </div>
+  <div data-lang="fr">
+    <h2>Services</h2>
+    <ul>
+      <li>🌿 Accompagnement professionnel du burn-out parental et professionnel</li>
+      <li>💬 Coaching individuel stress &amp; équilibre</li>
+      <li>🧘 Stratégies de gestion de l’énergie</li>
+      <li>🧠 Développement de la résilience</li>
+    </ul>
+  </div>
 
-    <div data-lang="cz">
-        <h2>Služby</h2>
-        <ul>
-            <li>🌿 Podpora při syndromu vyhoření</li>
-            <li>💬 Individuální koučink stresu a rovnováhy</li>
-            <li>🧘 Strategie řízení energie</li>
-            <li>🧠 Rozvoj emoční odolnosti</li>
-            <li>🏢 Konzultace pracovního stresu</li>
-        </ul>
-    </div>
+  <div data-lang="cz">
+    <h2>Služby</h2>
+    <ul>
+      <li>• Podpora při syndromu vyhoření</li>
+      <li>• Individuální koučink pro stres a rovnováhu</li>
+      <li>• Strategie pro generaci a zvládání změn</li>
+      <li>• Rozvoj odolnosti</li>
+    </ul>
+  </div>
 </div>
 
 <!-- APPROACH -->
 <div class="section" id="approach">
-    <div data-lang="fr">
-        <h2>Mon approche</h2>
-        <p>
-            Mon approche allie écoute, soutien et outils concrets.
-            Je combine des techniques psycho-éducatives, cognitives et de pleine conscience
-            pour aider mes clients à retrouver clarté, stabilité et énergie durable.
-        </p>
-    </div>
-
-    <div data-lang="cz">
-        <h2>Můj přístup</h2>
-        <p>
-            Můj přístup spojuje empatické naslouchání, podporu a praktické metody.
-            Využívám psycho-edukativní, kognitivní a mindfulness nástroje,
-            které klientům pomáhají získat jasnost, stabilitu a dlouhodobou energii.
-        </p>
-    </div>
+  <div data-lang="fr">
+    <h2>Mon approche</h2>
+    <p>
+      Mon approche allie écoute, soutien et outils concrets. Je combine des techniques psychologiques, cognitives et de pleine conscience
+      pour aider mes clients à retrouver clarté, stabilité et énergie durable.
+    </p>
+  </div>
+  <div data-lang="cz">
+    <h2>Můj přístup</h2>
+    <p>
+      Můj přístup spojuje empatii, praktické metody a práci s psychikou pro dosažení dlouhodobé změny a stability.
+    </p>
+  </div>
 </div>
 
 <!-- CONTACT -->
 <div class="section" id="contact">
-    <div data-lang="fr">
-        <h2>Contact</h2>
-        <p><strong>Email :</strong> votre-email@example.com</p>
-        <p><strong>Consultations :</strong> en ligne ou sur rendez-vous</p>
-        <a class="button" href="mailto:votre-email@example.com">Réserver une séance</a>
-    </div>
+  <div data-lang="fr">
+    <h2>Contact</h2>
+    <p><strong>Email :</strong> votre-email@example.com</p>
+    <p><strong>Consultations :</strong> En ligne ou sur rendez-vous</p>
+    <a class="button" href="mailto:votre-email@example.com">Obtenir une séance</a>
+  </div>
 
-    <div data-lang="cz">
-        <h2>Kontakt</h2>
-        <p><strong>Email:</strong> váš-email@example.com</p>
-        <p><strong>Konzultace:</strong> online nebo po domluvě</p>
-        <a class="button" href="mailto:váš-email@example.com">Objednat konzultaci</a>
-    </div>
+  <div data-lang="cz">
+    <h2>Kontakt</h2>
+    <p><strong>Email :</strong> vysok-email@example.com</p>
+    <p><strong>Konzultace :</strong> Online nebo po domluvě</p>
+    <a class="button" href="mailto:vysok-email@example.com">Objednat konzultaci</a>
+  </div>
 </div>
 
 <footer>
-    © 2025 Lenka Horáčková – Burn-out Consultant
+    • 2025 Lenka Horáčková — Burn-out Consultant
 </footer>
 
 </body>
